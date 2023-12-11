@@ -26,7 +26,7 @@ Pour démontrer comment utiliser Git Cherry-pick, supposons que nous ayons un r�
          \
            e - f - g Feature
 
-- L'utilisation de Git Cherry-pick est simple et peut être exécutée comme :
+- L'utilisation de Git Cherry-pick est simple et peut être exécutée ainsi :
 
 `git cherry-pick commitSha`
 
