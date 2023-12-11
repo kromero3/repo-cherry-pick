@@ -16,3 +16,43 @@
 
 - Git Cherry-pick peut entraîner des validations en double. Dans de nombreux scénarios, les fusions traditionnelles sont plutôt préférées.
 
+- Cela dit, Git Cherry-pick est un outil pratique pour quelques scénarios...
+
+# Comment utiliser Cherry-pick 
+
+Pour démontrer comment utiliser Git Cherry-pick, supposons que nous ayons un référentiel avec l'état de branche suivant :
+
+    a - b - c - d   Main
+         \
+           e - f - g Feature
+
+L'utilisation de Git Cherry-pick est simple et peut être exécutée comme :
+
+`git cherry-pick commitSha`
+
+Dans cet exemple, commitSha est une référence de commit. Vous pouvez trouver une référence de commit en utilisant la commande : `git log`
+
+Dans cet exemple, nous avons construit, disons que nous voulions utiliser le commit `f` dans `main`. Nous nous assurons d’abord que nous travaillons sur la branche `main`.
+
+`git checkout main`
+
+Ensuite, nous exécutons Cherry-pick avec la commande suivante :
+
+`git cherry-pick f`
+
+Une fois exécuté, notre historique Git ressemblera à :
+
+    a - b - c - d - f   Main
+         \
+           e - f - g Feature
+
+Le commit `f` a été sélectionné avec succès dans la branche `main`.
+
+
+
+
+
+
+
+
+
