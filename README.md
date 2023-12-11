@@ -26,27 +26,51 @@ Pour démontrer comment utiliser Git Cherry-pick, supposons que nous ayons un r�
          \
            e - f - g Feature
 
-L'utilisation de Git Cherry-pick est simple et peut être exécutée comme :
+- L'utilisation de Git Cherry-pick est simple et peut être exécutée comme :
 
 `git cherry-pick commitSha`
 
-Dans cet exemple, commitSha est une référence de commit. Vous pouvez trouver une référence de commit en utilisant la commande : `git log`
+- Dans cet exemple, commitSha est une référence de commit. Vous pouvez trouver une référence de commit en utilisant la commande : `git log`
 
-Dans cet exemple, nous avons construit, disons que nous voulions utiliser le commit `f` dans `main`. Nous nous assurons d’abord que nous travaillons sur la branche `main`.
+- Dans cet exemple, nous avons construit, disons que nous voulions utiliser le commit `f` dans `main`. Nous nous assurons d’abord que nous travaillons sur la branche `main`.
 
 `git checkout main`
 
-Ensuite, nous exécutons Cherry-pick avec la commande suivante :
+- Ensuite, nous exécutons Cherry-pick avec la commande suivante :
 
 `git cherry-pick f`
 
-Une fois exécuté, notre historique Git ressemblera à :
+- Une fois exécuté, notre historique Git ressemblera à :
 
     a - b - c - d - f   Main
          \
            e - f - g Feature
 
-Le commit `f` a été sélectionné avec succès dans la branche `main`.
+- Le commit `f` a été sélectionné avec succès dans la branche `main`.
+
+# Plusieurs exemples d'utilisation de Git Cherry-pick 
+
+- La commande `git cherry pick` peut également recevoir certaines options d'exécution.
+
+`-edit`
+
+- En passant l'option `-edit`, git demandera un message de validation avant d'appliquer l'opération de la sélection :
+
+`--no-commit` 
+
+- L'option `--no-commit` exécutera le Cherry pick, mais au lieu de faire un nouveau commit, elle déplacera le contenu du commit cible dans le répertoire de travail de la branche actuelle.
+
+`--signoff`
+
+- L'option `--signoff` ajoutera une ligne de signature « signoff » à la fin du message de validation sélectionné.
+
+- De plus, Git Cherry pick accepte également la saisie d'options pour la résolution des conflits de fusion, cela inclut les options : `--abort --continue` et `--quit`. Ces options sont couvertes plus en profondeur en ce qui concerne git merge et git rebase.
+
+
+
+
+
+
 
 
 
