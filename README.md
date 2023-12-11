@@ -69,7 +69,7 @@ Pour d√©montrer comment utiliser Git Cherry-pick, supposons que nous ayons un r√
 
 
 
-
+Ajout information test 2
 
 
 
