@@ -54,7 +54,7 @@ Pour démontrer comment utiliser Git Cherry-pick, supposons que nous ayons un r�
 
 `-edit`
 
-- En passant l'option `-edit`, git demandera un message de validation avant d'appliquer l'opération de la sélection :
+- En utilisant l'option `-edit`, git demandera un message de validation avant d'appliquer l'opération de la sélection :
 
 `--no-commit` 
 
@@ -64,7 +64,8 @@ Pour démontrer comment utiliser Git Cherry-pick, supposons que nous ayons un r�
 
 - L'option `--signoff` ajoutera une ligne de signature « signoff » à la fin du message de validation sélectionné.
 
-- De plus, Git Cherry pick accepte également la saisie d'options pour la résolution des conflits de fusion, cela inclut les options : `--abort --continue` et `--quit`. Ces options sont couvertes plus en profondeur en ce qui concerne git merge et git rebase.
+- De plus, Git Cherry pick accepte également la saisie d'options pour la résolution de conflits de fusion, cela inclut les options : `--abort --continue` et `--quit`. 
+
 
 
 
