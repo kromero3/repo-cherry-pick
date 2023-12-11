@@ -67,6 +67,7 @@ Pour démontrer comment utiliser Git Cherry-pick, supposons que nous ayons un r�
 - De plus, Git Cherry pick accepte également la saisie d'options pour la résolution de conflits de fusion, cela inclut les options : `--abort --continue` et `--quit`. 
 
 
+Ajout test information
 
 
 Ajout information test 2
@@ -79,6 +80,3 @@ Ajout information test 2
 
 
 
-
-
-Lol
